@@ -22,8 +22,8 @@ jobs:
           dotnet-version: "8.0"
       - name: Setup
         run: |
-          mkdir -v -p ~/.local/share/godot/export_templates/
-          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono/linux_debug.x86_64 ./linux_debug.x86_64
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono/linux__release.x86_64 ./linux_release.x86_64
       - name: Linux Build
         run: |
           mkdir -v -p build/linux
