@@ -1,0 +1,40 @@
+name: Godot Build Test
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - docs/
+      - .gitignore
+      - .gitattributes
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - README.md
+      - docs/
+      - .gitignore
+      - .gitattributes
+
+jobs:
+  Godot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - name: Download executable engine
+        shell: bash
+        run: wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_linux_x86_64.zip
+      - name: Download templates
+        shell: bash
+        run: wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_export_templates.tpz
+      - name: Unzip executable engine
+        shell: bash
+        run: unzip Godot_v4.3-stable_mono_linux_x86_64.zip
+      - name: Unzip templates
+        shell: bash
+        run: unzip Godot_v4.3-stable_mono_export_templates.tpz
+      - name: Build
+        shell: bash
+        run: mkdir bin && mkdir bin/linux && ./Godot_v4.3-stable_mono_linux_x86_64 --headless --export-debug linux
