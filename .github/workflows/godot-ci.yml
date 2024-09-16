@@ -23,7 +23,7 @@ jobs:
       - name: Setup
         run: |
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono/linux_debug.x86_64 ./linux_debug.x86_64
-          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono/linux__release.x86_64 ./linux_release.x86_64
+          mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono/linux_release.x86_64 ./linux_release.x86_64
       - name: Linux Build
         run: |
           mkdir -v -p build/linux
