@@ -24,6 +24,9 @@ jobs:
         run: |
           mkdir -v -p ~/.local/share/godot/export_templates/
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono
+      - name: Test
+        run: |
+          ls -a ~/.local/share/godot/export_templates
       - name: Linux Build
         run: |
           mkdir -v -p build/linux
