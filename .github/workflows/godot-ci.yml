@@ -26,6 +26,5 @@ jobs:
           mv /root/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono/linux_release.x86_64 ./linux_release.x86_64
       - name: Linux Build
         run: |
-          mkdir -v -p build/linux
           cd $PROJECT_PATH
-          godot --headless --verbose --export-release "Linux/X11" ../build/linux/$EXPORT_NAME.x86_64
+          godot --headless --verbose --export-release "Linux/X11" ./$EXPORT_NAME.x86_64
