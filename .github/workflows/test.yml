@@ -37,4 +37,4 @@ jobs:
         run: unzip Godot_v4.3-stable_mono_export_templates.tpz
       - name: Build
         shell: bash
-        run: mkdir bin && mkdir bin/linux && ./Godot_v4.3-stable_mono_linux_x86_64 --headless --export-debug linux
+        run: mkdir bin && mkdir bin/linux && ./Godot_v4.3-stable_mono_linux_x86_64/Godot_v4.3-stable_mono_linux_x86_64 --headless --export-debug linux
