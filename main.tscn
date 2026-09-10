@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c4re26kb0qkbn"]
+
+[ext_resource type="Script" uid="uid://3h18ky5t0rwa" path="res://addons/LTC/LtcAnnotationEffect.cs" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dlfgkft7klhvr" path="res://addons/LTC/LtcRichTextLabel.cs" id="1_ltc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xm2m"]
+content_margin_left = 0.0
+content_margin_top = 15.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_h2yge"]
+script = ExtResource("1_0xm2m")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bvp3"]
+content_margin_left = 0.0
+content_margin_top = 15.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_lquwl"]
+script = ExtResource("1_0xm2m")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mycd"]
+content_margin_left = 0.0
+content_margin_top = 15.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_272bh"]
+script = ExtResource("1_0xm2m")
+
+[node name="Node2D" type="VBoxContainer" unique_id=1508626841]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel1" type="RichTextLabel" parent="." unique_id=1979852575]
+custom_minimum_size = Vector2(1024, 24)
+custom_maximum_size = Vector2(-1, 39)
+propagate_maximum_size = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0xm2m")
+bbcode_enabled = true
+text = "[ltc=\"这是雪豹\"]芝士雪豹[/ltc]"
+fit_content = true
+custom_effects = [SubResource("RichTextEffect_h2yge")]
+script = ExtResource("1_ltc")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1306185772]
+custom_minimum_size = Vector2(1024, 24)
+custom_maximum_size = Vector2(-1, 39)
+propagate_maximum_size = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1bvp3")
+bbcode_enabled = true
+text = "その血の[ltc=\"さだめ\"]運命[/ltc]"
+fit_content = true
+custom_effects = [SubResource("RichTextEffect_lquwl")]
+script = ExtResource("1_ltc")
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1424621528]
+custom_minimum_size = Vector2(1024, 24)
+custom_maximum_size = Vector2(-1, 39)
+propagate_maximum_size = true
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7mycd")
+bbcode_enabled = true
+text = "[ltc=\"And time\"]From a place[/ltc] [ltc=\"beyond counting\"]beyond time[/ltc]"
+fit_content = true
+custom_effects = [SubResource("RichTextEffect_272bh")]
+visible_characters = 12
+visible_ratio = 0.5
+script = ExtResource("1_ltc")
